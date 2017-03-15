@@ -1,0 +1,18 @@
+<%if @user.admin%>
+  <h1>ADMIN</h1>
+<%end%>
+
+  <div>
+<h2><%=@user.name%></h2>
+  <h3>Mood: </h3><%=@user.mood%>
+  <h3>Height (in inches): </h3><%=@user.height%>
+  <h3>Happiness Level: </h3><%=@user.happiness%>
+  <h3>Nausea Level: </h3><%=@user.nausea%>
+  <h3>Tickets in Pocket: </h3><%=@user.tickets%>
+
+
+<h4>Go on a ride!
+<%=link_to "See attractions", '/attractions'%></h4>
+
+  <%=link_to("Log Out", logout_path, method: :post)%>
+  </div>
