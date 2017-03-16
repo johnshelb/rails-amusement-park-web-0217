@@ -1,0 +1,8 @@
+<h1>Attractions</h1>
+<%@attractions.each do |a|%>
+  <h2><%=link_to "Go on #{a.name}", attraction_path("#{a.id}") %> </h2><br>
+<%end%>
+
+<%if current_user.admin%>
+<%=link_to "New Attraction", new_attraction_path%>
+<%end%>
