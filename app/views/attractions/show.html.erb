@@ -1,6 +1,5 @@
 <%=@attraction.name%>
 <%@user = current_user%>
-<%binding.pry%>
 
 <%=form_for @user, url: user_path, method: :get, action: :show do |f|%>
 <%f.label :go_on_this_ride%>
